@@ -7,3 +7,13 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+
+
+
+function checkStudent(){
+ return  students.filter(user => user.score > 50).reduce((acc,cur) => {
+    return acc + cur.score + (cur.score *0.1);
+ }, 0)
+}
+
+console.log(`Total score is ${checkStudent()}`);
